@@ -1,4 +1,4 @@
-package com.algorithm.warmup;
+package com.algorithm.easy.warmup;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -8,6 +8,16 @@ import java.util.Scanner;
 public class SimpleArraySum {
 
     private static final Scanner scanner = new Scanner(System.in);
+
+    static int simpleArraySum(int[] ar) {
+        int sum = 0;
+
+        for(int i=0; i < ar.length; i++) {
+            sum += ar[i];
+        }
+
+        return sum;
+    }
 
     public static void main(String[] args) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
@@ -29,15 +39,5 @@ public class SimpleArraySum {
         bufferedWriter.newLine();
 
         bufferedWriter.close();
-    }
-
-    static int simpleArraySum(int[] ar) {
-        int sum = 0;
-
-        for(int i=0; i < ar.length; i++) {
-            sum += ar[i];
-        }
-
-        return sum;
     }
 }
