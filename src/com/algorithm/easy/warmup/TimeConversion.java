@@ -29,9 +29,8 @@ public class TimeConversion {
   private static final Scanner scan = new Scanner(System.in);
 
   public static void main(String[] args) throws IOException {
-    String s = scan.next();
 
-    String result = timeConversion(s);
+    String result = timeConversion("06:12:00PM");
 
     System.out.println(result);
   }
