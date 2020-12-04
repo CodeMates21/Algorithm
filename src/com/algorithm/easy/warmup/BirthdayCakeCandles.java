@@ -7,6 +7,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
@@ -15,23 +16,14 @@ public class BirthdayCakeCandles {
 
 
   public static void main(String[] args) throws IOException {
-    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-
-    int candlesCount = Integer.parseInt(bufferedReader.readLine().trim());
-
-    List<Integer> candles = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-        .map(Integer::parseInt)
-        .collect(toList());
+    List<Integer> candles = new ArrayList<>();
+    candles.add(3);
+    candles.add(2);
+    candles.add(1);
+    candles.add(3);
 
     int result = Result.birthdayCakeCandles(candles);
-
-    bufferedWriter.write(String.valueOf(result));
-    bufferedWriter.newLine();
-
-    bufferedReader.close();
-    bufferedWriter.close();
+    System.out.println(result);
   }
 
 

@@ -2,7 +2,6 @@ package com.algorithm.easy.implementation;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class GradingStudents {
 
@@ -13,7 +12,7 @@ public class GradingStudents {
 
       for (int i = 0; i < grades.size(); i++) {
         int remainder = grades.get(i) % 5;
-        if (grades.get(i) < 35 || remainder <= 2) {
+        if (grades.get(i) < 33 || remainder <= 2) {
           finalGrade.add(grades.get(i));
         } else {
           finalGrade.add(grades.get(i) + 5 - remainder);
