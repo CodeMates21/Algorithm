@@ -1,4 +1,4 @@
-package com.algorithm.implementation;
+package com.algorithm.easy.implementation;
 
 public class GradingStudents {
 

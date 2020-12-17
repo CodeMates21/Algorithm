@@ -1,7 +1,6 @@
-package com.algorithm.warmup;
+package com.algorithm.easy.warmup;
 
 import java.util.Arrays;
-
 public class SimpleArraySum {
 
     static int simpleArraySum(int[] ar) {
