@@ -50,11 +50,7 @@ public class StrongPassword {
       count++;
     }
 
-    if (6 - n < count) {
-      return count;
-    } else {
-      return 6 - n;
-    }
+    return 6 - n < count ? count: 6 - n;
   }
 
   static int minimumNumber2(int n, String password) {
