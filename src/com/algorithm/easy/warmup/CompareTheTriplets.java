@@ -18,13 +18,17 @@ public class CompareTheTriplets {
     static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
         //int result[] = new int[a.size()+1];
         List<Integer> result = new ArrayList<>();
-        int count1=0;
+        int count1 = 0;
         int count2 = 0;
 
-        for(int i=0; i<a.size(); i++){
-            if(a.get(i) > b.get(i)) result.add(0,count1++);
-            else if(a.get(i) < b.get(i)) result.add(1,count2++); //여기 안에서 add를 하면 runtime error 발생
-            else if(a.get(i) == b.get(i)) continue;
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i) > b.get(i)) {
+                result.add(0, ++count1);
+            } else if (a.get(i) < b.get(i)) {
+                result.add(1, ++count2); //여기 안에서 add를 하면 runtime error 발생
+            } else if (a.get(i) == b.get(i)) {
+                continue;
+            }
         }
 
         return result;
@@ -32,27 +36,20 @@ public class CompareTheTriplets {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .collect(toList());
+        List<Integer> integer1 = new ArrayList<>();
+        List<Integer> integer2 = new ArrayList<>();
 
-        List<Integer> b = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .collect(toList());
+        integer1.add(5);
+        integer1.add(6);
+        integer1.add(7);
 
-        List<Integer> result = compareTriplets(a, b);
+        integer2.add(3);
+        integer2.add(6);
+        integer2.add(10);
 
-        bufferedWriter.write(
-                result.stream()
-                        .map(Object::toString)
-                        .collect(joining(" "))
-                        + "\n"
-        );
+        List<Integer> result = compareTriplets(integer1, integer2);
 
-        bufferedReader.close();
-        bufferedWriter.close();
+        System.out.println(result);
     }
 }
