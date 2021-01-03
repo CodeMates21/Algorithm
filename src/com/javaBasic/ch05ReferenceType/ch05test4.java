@@ -1,4 +1,4 @@
-package com.javaBasic.ch05Array;
+package com.javaBasic.ch05ReferenceType;
 
 public class ch05test4 {
   public static void main(String[] args){
@@ -11,7 +11,6 @@ public class ch05test4 {
         max=array[i];
       }
     }
-
     System.out.println("max: " + max);
   }
 

@@ -1,4 +1,4 @@
-package com.javaBasic.ch05Array;
+package com.javaBasic.ch05ReferenceType;
 
 public class ArrayCreateByValueListExample2 {
 
